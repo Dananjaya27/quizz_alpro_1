@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main(){
+    // membuat variabel
+    char nama = 'Alibaba';
+    int npm = 123456789;
+    int nilai = 75;
+
+    // membuat pointer
+    char *p_nama = &nama;
+    int *p_npm = &npm;
+    int *p_nilai = &nilai;
+
+    // mecetak alamat memori variabel
+    printf("alamat memori variabel 'nama' = %s\n", &nama);
+    printf("alamat memori variabel 'npm' = %d\n", &npm);
+    printf("alamat memori variabel 'nilai' = %d\n", &nilai);
+    
+    // mencetak referensi alamat memori pointer
+    printf("referensi alamat memori *p_nama = %s\n", p_nama);
+    printf("referensi alamat memori *p_npm = %d\n", p_npm);
+    printf("referensi alamat memori *p_nilai = %d\n", p_nilai);
+
+    // mencetak alamat memori pointer
+    printf("alamat memori *p_nama = %s\n", &p_nama);
+    printf("alamat memori *p_npm = %d\n", &p_npm);
+    printf("alamat memori *p_nilai = %d\n", &p_nilai);
+    
+    // mencetak isi variabel nilai awal
+	  printf("isi nilai awal = %d\n", nilai);
+	
+    // mengubah data variabel nilai dari pointer
+    *p_nilai = 100;
+
+    // melihat isi variabel nilai baru
+    printf("isi nilai setelah diubah = %d\n", nilai);
+}
